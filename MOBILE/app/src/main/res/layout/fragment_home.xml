@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.HomeFragment"
+    android:backgroundTint="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/background"
+        android:paddingVertical="20dp">
+
+        <TextView
+            android:id="@+id/tvSelamatDatang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sapaan"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text4"
+            android:fontFamily="@font/inter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="20dp"/>
+
+        <TextView
+            android:id="@+id/tvNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/seruan"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text3"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSelamatDatang"
+            android:layout_marginHorizontal="20dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSedangMenanam"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNama">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/tvSedangMenanam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tanam"
+                    android:textColor="@color/abu"
+                    android:textSize="@dimen/text3"
+                    android:fontFamily="@font/inter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivGambarSayur"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSayur"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSedangMenanam"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/tvSayur"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/text1"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/ivGambarSayur"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSedangMenanam" />
+
+                <TextView
+                    android:id="@+id/tvUmurTanaman"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/abu"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/text5"
+                    android:text="@string/umur"
+                    app:layout_constraintEnd_toStartOf="@id/tvPanenDalam"
+                    app:layout_constraintStart_toEndOf="@+id/ivGambarSayur"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSayur" />
+
+                <TextView
+                    android:id="@+id/tvPanenDalam"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/abu"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/text5"
+                    android:text="@string/waktuPanen"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvUmurTanaman"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSayur" />
+
+                <TextView
+                    android:id="@+id/tvUmur"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="10dp"
+                    android:textSize="@dimen/text4"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/inter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvPanen"
+                    app:layout_constraintStart_toEndOf="@id/ivGambarSayur"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUmurTanaman" />
+
+                <TextView
+                    android:id="@+id/tvPanen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/text4"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvPanenDalam"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPanenDalam" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSuhu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="7.5dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toStartOf="@id/cvKelembapan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvSedangMenanam">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/ivSuhu"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/suhu"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvSuhu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Suhu"
+                    android:textColor="@color/abu"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/text5"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toEndOf="@id/ivSuhu"
+                    app:layout_constraintTop_toTopOf="@id/ivSuhu"  />
+
+                <TextView
+                    android:id="@+id/tvAngkaSuhu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="30°C"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/text2"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvSuhu"
+                    app:layout_constraintTop_toBottomOf="@id/tvSuhu"  />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvKelembapan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7.5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cvSuhu"
+            app:layout_constraintTop_toBottomOf="@+id/cvSedangMenanam">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/ivKelembapan"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/kelembapan"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvKelembapan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Kelembapan"
+                    android:textColor="@color/abu"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/text5"
+                    app:layout_constraintStart_toEndOf="@id/ivKelembapan"
+                    app:layout_constraintTop_toTopOf="@id/ivKelembapan" />
+
+                <TextView
+                    android:id="@+id/tvAngkaKelembapan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="70 %"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text2"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvKelembapan"
+                    app:layout_constraintTop_toBottomOf="@id/tvKelembapan" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvPH"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="7.5dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toStartOf="@id/cvNutrisi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvSuhu">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/ivPH"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/ph"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvTingkatKeasaman"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Keasaman"
+                    android:textColor="@color/abu"
+                    android:textSize="@dimen/text5"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toEndOf="@id/ivPH"
+                    app:layout_constraintTop_toTopOf="@id/ivPH"/>
+
+                <TextView
+                    android:id="@+id/tvAngkaTingkatKeasaman"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="7.4 pH"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text2"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvTingkatKeasaman"
+                    app:layout_constraintTop_toBottomOf="@id/tvTingkatKeasaman" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvNutrisi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="7.5dp"
+            android:layout_marginEnd="20dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cvPH"
+            app:layout_constraintTop_toBottomOf="@+id/cvKelembapan">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/ivNutrisi"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/nutrisi"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <TextView
+                    android:id="@+id/tvNutrisi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nutrisi"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/abu"
+                    android:textSize="@dimen/text5"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toEndOf="@id/ivNutrisi"
+                    app:layout_constraintTop_toTopOf="@id/ivNutrisi" />
+
+                <TextView
+                    android:id="@+id/tvAngkaNutrisi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="50 ppm"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text2"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvNutrisi"
+                    app:layout_constraintTop_toBottomOf="@id/tvNutrisi"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvKesehatan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvPH">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/tvKesehatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Tingkat Kesehatan"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/abu"
+                    android:textSize="@dimen/text5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAngkaKesehatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sehat"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text1"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvKesehatan"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Future Farmers</string>
+    <string name="sapaan">Selamat Datang!</string>
+    <string name="seruan">Ayo Pantau Tumbuh si Hidro</string>
+    <string name="tanam">Sedang Menanam</string>
+    <string name="umur">Umur Tanaman</string>
+    <string name="waktuPanen">Panen dalam</string>
+
+    <string name="sapaanLogin">Selamat Datang!</string>
+</resources>

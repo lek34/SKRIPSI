@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FutureFarmers" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- Active thumb color & Active track color(30% transparency) -->
+        <item name="colorPrimary">@color/green</item>
+
+        <item name="colorAccent">@color/white</item>
+        <item name="colorSecondary">@color/white</item>
+
+
+        <!-- Inactive thumb color -->
+        <item name="switchStyle">@style/CustomSwitch</item> <!-- Apply custom switch style -->
+
+    </style>
+    <style name="CustomSwitch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:thumb">@drawable/custom_thumb</item>
+        <item name="android:track">@drawable/custom_track</item>
+    </style>
+    <style name="BottomNavigationStyle">
+        <item name="android:background">@color/white</item> <!-- Set background color to white -->
+        <item name="android:elevation">0dp</item> <!-- Adjust elevation to control shadow -->
+    </style>
+    <style name="Theme.FutureFarmers" parent="Base.Theme.FutureFarmers" />
+</resources>
